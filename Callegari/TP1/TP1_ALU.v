@@ -40,32 +40,18 @@
 | 000010 |   ALU_Out = A srl B;
 ----------------------------------------------------------------------*/
 
-//SRL
-//Shift Right Logical operation
-//shifts elements N positions to the right for positive N, or to the left for negative N. Fills with 0s
 
-//B*10010111* SRL  2 = B*00100101*  
-//B*10010111* SRL -6 = B*11000000*
+//arithmetic shift uses context to determine the fill bits, so:
 
+//    SRA arithmetic right shift (>>>) - shift right specified number of bits, fill with value of sign bit if expression is signed, otherwise fill with zero,
+//    SLA arithmetic left shift (<<<) - shift left specified number of bits, fill with zero.
 
-//SRA
-//Shift Right Arithmetic operation
-//Fills vacated positions with a copy of the element at the end being vacated.
-
-//B*01001011* SRA 3 = B*00001001*
-//B*10010111* SRA 3 = B*11110010*
-
-//if N is negative, the shifts work in the opposite direction
-
-//B*00010001* SRA -2 = B*01000111*
-
+//On the other hand, SRL logical shift (<<, >>) always fill the vacated bit positions with zeroes.
 
 
 
 module TP1_ALU
-#(parameter N_REP =3,
-  parameter N_BITS_IN =3 
-  //parameter N_BITS_OUT =8
+#(parameter N_BITS_IN =6 
 )
 (   // CLOCK Y RESET
     input   wire    i_clk ,
@@ -82,17 +68,15 @@ module TP1_ALU
     );
     
     
-   reg      [N_BITS_IN-1:0] r_alu_A ;       // Operando 1
+   reg signed     [N_BITS_IN-1:0] r_alu_A ;       // Operando 1
    reg      [N_BITS_IN-1:0] r_alu_B ;       // Operando 2
    reg      [5:0] r_alu_Sel ;               // Selector Operacion
    
    reg      [N_BITS_IN-1:0] r_alu_Out ;
     
-//   wire     [N_BITS_IN-1:0] w_alu_A ;  
-//   wire     [N_BITS_IN-1:0] w_alu_B ; 
-//   wire     [5:0] w_alu_Sel ; 
-   
+
    assign   o_ALU_Out = r_alu_Out;
+
     
     always @(posedge i_clk) begin
         
@@ -102,14 +86,14 @@ module TP1_ALU
             r_alu_Sel <= {6'b100101};          // Operacion en inicio: OR
         end 
         else 
-//            if (i_btn_1)    
-//                r_alu_A <= i_Switches;         //Carga Operando 1
-//            else if (i_btn_2)
-//                r_alu_B <= i_Switches;         //Carga Operando 2
-//            else if (i_btn_3)
-//                r_alu_Sel <= i_Switches[5:0];  //Carga Operación
+////            if (i_btn_1)    
+////                r_alu_A <= i_Switches;         //Carga Operando 1
+////            else if (i_btn_2)
+////                r_alu_B <= i_Switches;         //Carga Operando 2
+////            else if (i_btn_3)
+////                r_alu_Sel <= i_Switches[5:0];  //Carga Operación
                 
-            case({i_btn_1, i_btn_2, i_btn_3})
+            casez({i_btn_1, i_btn_2, i_btn_3})
                 3'b1?? : r_alu_A <= i_Switches;         //Carga Operando 1
                 3'b?1? : r_alu_B <= i_Switches;         //Carga Operando 2
                 3'b??1 : r_alu_Sel <= i_Switches[5:0];  //Carga Operación 
@@ -117,7 +101,7 @@ module TP1_ALU
     end
     
     
-   // always @(w_alu_A,w_alu_B,w_alu_Sel) begin
+ 
     always @(*) begin
         
         case (r_alu_Sel)
@@ -129,8 +113,7 @@ module TP1_ALU
             6'b100111 :     r_alu_Out = ~(r_alu_A | r_alu_B);       // NOR
             6'b000011 :     r_alu_Out = r_alu_A >>> r_alu_B;        // SRA
             6'b000010 :     r_alu_Out = r_alu_A >> r_alu_B;         // SRL
-            
-            
+                        
             default: r_alu_Out = 0;
          endcase
     end
