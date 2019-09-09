@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+PROGRAMA instance_name (
+    .SWITCH(SWITCH), 
+    .BOT(BOT), 
+    .LED(LED), 
+    .CLK(CLK)
+    );
+
+

@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Sep 09 14:57:23 2019
+# Process ID: 1804
+# Log file: D:/workspace/TP1a/planAhead_run_4/planAhead.log
+# Journal file: D:/workspace/TP1a/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/workspace/TP1a/pa.fromHdl.tcl
+# create_project -name TP1a -dir "D:/workspace/TP1a/planAhead_run_4" -part xc7a100tcsg324-2L
+create_project: Time (s): elapsed = 00:00:17 . Memory (MB): peak = 358.395 ; gain = 28.199
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "PROGRAMA.ucf" [current_fileset -constrset]
+Adding file 'D:/workspace/TP1a/PROGRAMA.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {XOR.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {SUB.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {SRL.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {SRA.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {OR.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {NOR.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {AND.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ADD.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ALU.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {PROGRAMA.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top PROGRAMA $srcset
+# add_files [list {PROGRAMA.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc7a100tcsg324-2L
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "D:/workspace/TP1a/XOR.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/SUB.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/SRL.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/SRA.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/OR.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/NOR.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/AND.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/ADD.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/ALU.v" into library work
+Analyzing Verilog file "D:/workspace/TP1a/PROGRAMA.v" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [D:/workspace/TP1a/PROGRAMA.ucf]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W19 [D:/workspace/TP1a/PROGRAMA.ucf:10]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site T17 [D:/workspace/TP1a/PROGRAMA.ucf:11]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site E19 [D:/workspace/TP1a/PROGRAMA.ucf:15]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site U19 [D:/workspace/TP1a/PROGRAMA.ucf:16]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site V19 [D:/workspace/TP1a/PROGRAMA.ucf:17]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W18 [D:/workspace/TP1a/PROGRAMA.ucf:18]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site U15 [D:/workspace/TP1a/PROGRAMA.ucf:19]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W16 [D:/workspace/TP1a/PROGRAMA.ucf:24]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W17 [D:/workspace/TP1a/PROGRAMA.ucf:25]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W15 [D:/workspace/TP1a/PROGRAMA.ucf:26]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W14 [D:/workspace/TP1a/PROGRAMA.ucf:28]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W13 [D:/workspace/TP1a/PROGRAMA.ucf:29]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W5 [D:/workspace/TP1a/PROGRAMA.ucf:47]
+Finished Parsing UCF File [D:/workspace/TP1a/PROGRAMA.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 23a41f71
+open_rtl_design: Time (s): elapsed = 00:02:39 . Memory (MB): peak = 606.680 ; gain = 235.492
+update_compile_order -fileset sim_1
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See D:/workspace/TP1a\planAhead_pid1804.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Sep 09 15:04:47 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

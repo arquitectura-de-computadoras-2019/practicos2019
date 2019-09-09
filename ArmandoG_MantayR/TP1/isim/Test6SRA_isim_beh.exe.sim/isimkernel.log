@@ -1,0 +1,10 @@
+Command line:
+   Test6SRA_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49199
+
+Fri Sep 06 16:54:57 2019
+
+
+ Elaboration Time: 0.140202 sec

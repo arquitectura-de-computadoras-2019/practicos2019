@@ -1,0 +1,43 @@
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+par -w -intstyle ise -ol high -t 1 PROGRAMA_map.ncd PROGRAMA.ncd PROGRAMA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PROGRAMA.twx PROGRAMA.ncd -o PROGRAMA.twr PROGRAMA.pcf -ucf PROGRAMA.ucf 
+bitgen -intstyle ise -f PROGRAMA.ut PROGRAMA.ncd 
+vhdtdtfi -lib work D:/workspace/TP1a/PROGRAMA.v -lang verilog -prj TP1a -o PROGRAMA.spl -module PROGRAMA -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e PROGRAMA.spl D:/workspace/TP1a/PROGRAMA.sym 
+vhdtdtfi -lang verilog -prj TP1a -o D:/workspace/TP1a/PROGRAMA.tfi -lib work D:/workspace/TP1a//PROGRAMA.v -module PROGRAMA -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+par -w -intstyle ise -ol high -t 1 PROGRAMA_map.ncd PROGRAMA.ncd PROGRAMA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PROGRAMA.twx PROGRAMA.ncd -o PROGRAMA.twr PROGRAMA.pcf -ucf PROGRAMA.ucf 
+vhdtdtfi -lib work D:/workspace/TP1a/PROGRAMA.v -lang verilog -prj TP1a -o PROGRAMA.spl -module PROGRAMA -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e PROGRAMA.spl D:/workspace/TP1a/PROGRAMA.sym 
+vhdtdtfi -lib work D:/workspace/TP1a/PROGRAMA.v -lang verilog -prj TP1a -o PROGRAMA.spl -module PROGRAMA -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e PROGRAMA.spl D:/workspace/TP1a/PROGRAMA.sym 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc7a100t-csg324-2L PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc7a100t-csg324-2L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+par -w -intstyle ise -ol high -t 1 PROGRAMA_map.ncd PROGRAMA.ncd PROGRAMA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PROGRAMA.twx PROGRAMA.ncd -o PROGRAMA.twr PROGRAMA.pcf -ucf PROGRAMA.ucf 
+bitgen -intstyle ise -f PROGRAMA.ut PROGRAMA.ncd 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+par -w -intstyle ise -ol high -t 1 PROGRAMA_map.ncd PROGRAMA.ncd PROGRAMA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PROGRAMA.twx PROGRAMA.ncd -o PROGRAMA.twr PROGRAMA.pcf -ucf PROGRAMA.ucf 
+bitgen -intstyle ise -f PROGRAMA.ut PROGRAMA.ncd 
+xst -intstyle ise -ifn "D:/workspace/TP1a/PROGRAMA.xst" -ofn "D:/workspace/TP1a/PROGRAMA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PROGRAMA.ucf -p xc3s100e-cp132-4 PROGRAMA.ngc PROGRAMA.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o PROGRAMA_map.ncd PROGRAMA.ngd PROGRAMA.pcf 
+par -w -intstyle ise -ol high -t 1 PROGRAMA_map.ncd PROGRAMA.ncd PROGRAMA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PROGRAMA.twx PROGRAMA.ncd -o PROGRAMA.twr PROGRAMA.pcf -ucf PROGRAMA.ucf 
+bitgen -intstyle ise -f PROGRAMA.ut PROGRAMA.ncd 
