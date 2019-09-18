@@ -22,8 +22,8 @@ module modulo_alu #(parameter lenD = 8, parameter lenO = 6)
 	 6'b100100 : resultado = nr1&nr2; //and
 	 6'b100101 : resultado = nr1|nr2; //or
 	 6'b100110 : resultado = nr1^nr2; //xor
-	 6'b000011 : resultado = nr1 >> nr2; //SRA                                                a nr1 se hace un right shift por nr2-bits, se rellena con ceros (lgico)
-	 6'b000010 : resultado = nr1 >>> nr2; //SRL                                                   se rellena con unos (si es negativo, sino con ceros)
+	 6'b000011 : resultado = nr1 >>> nr2; //SRA                                           a nr1 se hace un right shift por nr2-bits, se rellena con ceros (lgico)
+	 6'b000010 : resultado = nr1 >> nr2; //SRL                                                   se rellena con unos (si es negativo, sino con ceros)
 	 6'b100111 : resultado = ~(nr1|nr2); 
 	 
 	 default: resultado = -1;
