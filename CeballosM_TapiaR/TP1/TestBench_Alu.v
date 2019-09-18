@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   13:18:08 09/13/2016
+// Create Date:   13:18:08 09/10/2018
 // Design Name:   modulo_alu
-// Module Name:   C:/Documents and Settings/ALU/TestBench_Alu.v
+// Module Name:   
 // Project Name:  ALU
 // Target Device:  
 // Tool versions:  
