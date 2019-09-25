@@ -5,7 +5,7 @@ module alu #(
 	parameter BUS_SIZE = 32)
 	(
 	//Inputs
-	input wire [BUS_SIZE-1:0] i_data_1,
+	input wire signed [BUS_SIZE-1:0] i_data_1,
 	input wire [BUS_SIZE-1:0] i_data_2,
 	input wire [5:0] i_ctrl,
 	//Outputs
@@ -24,13 +24,13 @@ module alu #(
 	always @*
 	begin: alu
 		case (i_ctrl)
-			SRL: begin
+			ADD: begin
 					 o_out = i_data_1 >> i_data_2;
 				  end
 			SRA: begin
 					 o_out = i_data_1 >>> i_data_2;
 				  end
-			ADD: begin
+			SRL: begin
 					 o_out = i_data_1 + i_data_2;
 				  end
 			SUB: begin
@@ -49,7 +49,7 @@ module alu #(
 					 o_out = ~(i_data_1 | i_data_2);
 				  end
 			default: begin
-					o_out = 0;
+					o_out = 8'b11111111;
 				  end
 		endcase				
 	end
